@@ -1,0 +1,42 @@
+/*..................HEADER FOR ALL PAGES.........................*/
+.header {
+    border-bottom: 1px solid #ECECEC;
+}
+.main-nav {
+    display: flex;
+    align-items: center;
+
+    & .main-link {
+        margin-right: 95px;
+    }
+}
+.nav-list {
+    display: flex;
+    align-items: center;
+
+    /*nav-list-item:not...*/
+    &-item:not(:last-child) {
+        margin-right: 50px;
+    }
+
+    /*nav-list-link*/
+    &-link {
+        position: relative;
+
+        padding: 32px 0px;;
+
+        transition: color var(--trans-duration) var(--trans-time-func);
+    
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.143;
+        letter-spacing: 0.02em;
+        color: var(--main-text-col);
+
+        /*nav-list-link:hover, :focus*/
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+    }
+}

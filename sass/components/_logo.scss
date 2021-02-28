@@ -1,0 +1,27 @@
+/*...MAIN LINK/LOGO...*/
+.web{
+    font-family: var(--logo-font);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.192;
+    letter-spacing: 0.03em;
+    color: var(--accent-color);
+}
+.studio {
+    font-family: var(--logo-font);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.192;
+    letter-spacing: 0.03em;
+    color: #000000;
+
+    &-footer {
+        font-family: var(--logo-font);
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.192;
+        letter-spacing: 0.03em;
+        color: var(--white-text);
+    }
+}
+/*... END MAIN LINK/LOGO...*/

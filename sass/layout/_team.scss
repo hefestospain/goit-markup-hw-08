@@ -1,0 +1,50 @@
+.team {
+    background-color: var(--accent2-color);
+    padding-bottom: 95px;
+    padding-top: 95px;
+
+    /*контейнер для падингов для карточек НАША КОМАНДА*/
+    &-pad {
+        padding: 30px 32px;;
+    }
+    /*team-list*/
+    &-list {
+        display: flex;
+        align-items: center;
+
+        /*team-list-item*/
+        &-item {
+            width: 270px;
+            background-color: var(--white-text);
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+            border-radius: 0px 0px 4px 4px;
+
+            /*team-list-item:not...*/
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+    }
+
+    /*team-item-title*/
+    &-item-title {
+        margin-bottom: 10px;;
+    
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.188;  
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--main-text-col);
+    }
+
+    /*team-item-descr*/
+    &-item-descr {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.188;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--second-text-col);
+    }
+}

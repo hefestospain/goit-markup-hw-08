@@ -1,0 +1,32 @@
+.modal-close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    background-color: var(--white-text);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.close-btn-icon {
+    width: 18px;
+    height: 18px;
+
+    transition: fill var(--trans-duration) var(--trans-time-func);
+
+    .modal-close-btn:focus & {
+        fill: var(--accent-color);
+    }
+}

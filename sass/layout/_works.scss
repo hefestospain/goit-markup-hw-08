@@ -1,0 +1,102 @@
+/*.......WORKS/PORTFOLIO.......*/
+.works {
+    padding: 95px 0px;
+
+    /*works-list*/
+    &-list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        /*works-list-item*/
+        &-item {
+            width: 370px;
+            background-color: var(--white-text);
+            border: 1px solid #EEEEEE;
+
+            /*works-list-item:not...*/
+            &:not(:nth-child(3n)) {
+                margin-right: 30px;
+            }
+
+            /*works-list-item:not...*/
+            &:not(:nth-child(n+7)) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    /*works-item-link*/
+    &-item-link {
+        display: block;
+        width: 370px;
+    
+        box-shadow: none;
+        transition: box-shadow var(--trans-duration) var(--trans-time-func);
+
+        /*works-item-link:hover, :focus*/
+        &:hover,
+        &:focus {
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+            0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+        }
+    }
+
+    /*works-img-thumb*/
+    &-img-thumb {
+        position: relative;
+        overflow: hidden;
+    }
+
+    /*works-img-descrp*/
+    &-img-descrp {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        
+        background-color: rgba(33, 150, 243, 0.9);
+        padding: 63px 24px;
+    
+        font-size: 18px;
+        line-height: 1.56;
+        letter-spacing: 0.03em;
+        color: var(--white-text);
+    
+        transform: translateY(100%);
+    
+        transition: transform var(--trans-duration) var(--trans-time-func);
+
+        .works-item-link:hover &,
+        .works-item-link:focus & {
+            transform: translateY(0);
+        }
+    }
+
+    /*works-item-title*/
+    &-item-title {
+        margin-bottom: 5px;
+    
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2.00;
+        letter-spacing: 0.06em;
+        color: var(--main-text-col);
+    }
+
+    /*works-item-descr*/
+    &-item-descr {
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.875;
+        letter-spacing: 0.03em;
+        color: var(--second-text-col);
+    }
+}
+/*контейнер для падингов для карточек ПОРТФОЛИО*/
+.portfolio-pad{
+    padding: 20px 24px;
+}

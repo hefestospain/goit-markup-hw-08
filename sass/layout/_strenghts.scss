@@ -1,0 +1,61 @@
+.strengths {
+    padding-top: 95px;
+    padding-bottom: 95px;
+
+    /*strengths-image*/
+    &-image {
+        background-color: var(--accent2-color);
+        border-radius: 4px;
+    
+        width: 270px;
+        height: 120px;
+        margin-bottom: 30px;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*strengths-icon*/
+    &-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    /*strengths-list*/
+    &-list {
+        display: flex;
+        align-items: center;
+
+        /*strengths-list-item*/
+        &-item {
+            width: 270px;
+
+            /*strengths-list-item:not...*/
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+
+            /*strengths-list-item-title*/
+            &-title {
+                margin-bottom: 10px;
+            
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 1.143;
+                letter-spacing: 0.03em;
+                text-transform: uppercase;
+                color: var(--main-text-col);
+            }
+
+            /*strengths-list-item-description*/
+            &-descr {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 1.71;
+                letter-spacing: 0.03em;
+                color: var(--second-text-col);
+            }
+        }
+    }
+}

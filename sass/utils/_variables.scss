@@ -1,0 +1,23 @@
+/**
+#212121 - цвет навигации и заголовка - главный текст
+#757575 - цвет телефона и мыла, текста - второстипенный
+#2F303A - цвет фона для секции героя
+#F5F4FA - цвет фона второстипенный, светлого серого
+#E5E5E5 - цвет фона главный
+**/
+
+/*variants */
+:root {
+    --text-font: "Roboto", sans-serif;
+    --logo-font: "Raleway", sans-serif;
+    --accent-color: #2196F3;
+    --main-text-col: #212121;
+    --second-text-col: #757575;
+    --white-text: #FFFFFF;
+    --ground-color: #2F303A;
+    --accent2-color: #F5F4FA;
+    --ground-main-color: #E5E5E5;
+    --icon-color: #AFB1B8;
+    --trans-duration: 250ms;
+    --trans-time-func: cubic-bezier(0.4, 0, 0.2, 1);
+}

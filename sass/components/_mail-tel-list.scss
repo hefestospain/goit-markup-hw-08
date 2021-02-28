@@ -1,0 +1,60 @@
+/*mail y telephone*/
+.mltel-list {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    &-item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    /*mltel-list-link*/
+    &-link { 
+        padding: 32px 0px;;
+
+        transition: color var(--trans-duration) var(--trans-time-func);
+
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.143;
+        letter-spacing: 0.02em;
+        color: var(--second-text-col);
+    
+        display: flex;
+        align-items: center;
+    
+        fill: var(--second-text-col);
+
+        /*mltel-list-link:hover, :focus*/
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+    }
+}
+
+.logo-mail {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+
+    transition: fill var(--trans-duration) var(--trans-time-func);
+
+    .mltel-list-link:hover &,
+    .mltel-list-link:focus & {
+        fill: var(--accent-color);
+    }
+}
+
+.logo-phone {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+
+    transition: fill var(--trans-duration) var(--trans-time-func);
+
+    .mltel-list-link:hover &,
+    .mltel-list-link:focus & {
+        fill: var(--accent-color);
+    }
+}

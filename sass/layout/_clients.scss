@@ -1,0 +1,49 @@
+/*...OUR CLIENTS...*/
+.clients {
+    padding: 95px 0;
+
+    /*clients-list*/
+    &-list {
+        display: flex;
+
+        /*clients-list-item:not...*/
+        &-item:not(:last-child) {
+            margin-right: 30px;
+        }
+
+        /*clients-list-link*/
+        &-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            width: 170px;
+            height: 90px;
+        
+            border: 1px solid #AFB1B8;
+            box-sizing: border-box;
+            border-radius: 4px;
+        
+            transition: border-color var(--trans-duration) var(--trans-time-func);
+
+            /*clients-list-link:hover, :focus*/
+            &:hover,
+            &:focus {
+                border-color: var(--accent-color);
+            }
+        }
+
+        /*clients-list-icon*/
+        &-icon {
+            fill: var(--icon-color);
+        
+            transition: fill var(--trans-duration) var(--trans-time-func);
+
+            /*clients-list-link:hover, :focus .clients-list-icon*/
+            .clients-list-link:hover &,
+            .clients-list-link:focus & {
+                fill: var(--accent-color);
+            }
+        }
+    }
+}
