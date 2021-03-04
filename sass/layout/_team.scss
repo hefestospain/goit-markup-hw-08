@@ -1,7 +1,13 @@
 .team {
     background-color: var(--accent2-color);
-    padding-bottom: 95px;
-    padding-top: 95px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 95px;
+        padding-top: 95px;
+    }
+    
 
     /*контейнер для падингов для карточек НАША КОМАНДА*/
     &-pad {
@@ -10,18 +16,55 @@
     /*team-list*/
     &-list {
         display: flex;
-        align-items: center;
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media screen and (min-width:768px) {
+            flex-wrap: wrap;
+        }
+
+        @media screen and (min-width: 1200px) {
+            flex-wrap: nowrap;
+        }
+        
 
         /*team-list-item*/
         &-item {
-            width: 270px;
+            width: 100%;
+
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+
             background-color: var(--white-text);
-            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: 
+                0px 1px 3px rgba(0, 0, 0, 0.12),
+                0px 1px 1px rgba(0, 0, 0, 0.14), 
+                0px 2px 1px rgba(0, 0, 0, 0.2);
             border-radius: 0px 0px 4px 4px;
 
-            /*team-list-item:not...*/
-            &:not(:last-child) {
-                margin-right: 30px;
+            @media screen and (min-width: 768px) {
+                width: 354px;
+                // задал фиксированую высоту, была проблема с последней карочкой
+                height: 542px;  
+
+                &:nth-child(2n+1) {
+                    margin-right: 30px;
+                }
+            }
+
+            @media screen and (min-width:1200px) {
+                width: 270px;
+                // задал фиксированую высоту, была проблема с последней карочкой
+                height: 428px;
+                
+                /*team-list-item:not...*/
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
             }
         }
     }

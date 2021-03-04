@@ -20,6 +20,9 @@
     }
 }
 
+@media screen and (max-width: 767px) { 
+    
+}
 .close-btn-icon {
     width: 18px;
     height: 18px;
@@ -27,6 +30,15 @@
     transition: fill var(--trans-duration) var(--trans-time-func);
 
     .modal-close-btn:focus & {
+        fill: var(--accent-color);
+    }
+
+    .mobile-menu & {
+        width: 40px;
+        height: 40px;
+    }
+
+    .mobile-menu-close:focus & {
         fill: var(--accent-color);
     }
 }

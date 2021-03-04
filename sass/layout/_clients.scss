@@ -1,14 +1,38 @@
 /*...OUR CLIENTS...*/
 .clients {
-    padding: 95px 0;
+    padding: 60px 0;
+
+    @media screen and (min-width: 1200px) {
+        padding: 95px 0;
+    }
+    
 
     /*clients-list*/
     &-list {
         display: flex;
+        justify-content: center;
 
+        @media screen and (max-width: 1199px) {
+            flex-wrap: wrap;
+            margin: -15px;        
+        }
+        
+        &-item {
+            @media screen and (max-width: 767px) {
+                margin: 15px;
+                width: calc(100%-4*15/2);
+            }
+            @media screen and (max-width: 1199px) {
+                margin: 15px;
+                width: calc(100%-6*15/3);
+            }
+            
+        }
         /*clients-list-item:not...*/
         &-item:not(:last-child) {
-            margin-right: 30px;
+            @media screen and (min-width:1200px) {
+                margin-right: 30px;
+            }
         }
 
         /*clients-list-link*/

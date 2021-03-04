@@ -12,8 +12,8 @@
 </head>
 <body>
     <header class="header">
-        <!--main navigation-->
         <div class="container">
+            <!--main navigation-->
             <nav class="main-nav">
                 <!--main link -->
                 <a class="main-link link" lang="en" href="./index.html"><span class="web">Web</span><span class="studio">Studio</span></a>
@@ -30,6 +30,11 @@
                     </li>
                 </ul>
             </nav>
+            <button class="burger-btn" type="button" data-menu-button>
+                <svg class="burger-icon">
+                    <use href = "./images/sprite.svg#burger-menu"></use>
+                </svg>
+            </button>
             <!--list of contacts links-->
             <ul class="mltel-list list">
                 <li class="mltel-list-item">
@@ -46,6 +51,52 @@
                             <use href = "./images/sprite.svg#smartphone"></use>
                         </svg>
                         +38 096 111 11 11</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mobile-menu" data-menu>
+            <button class="mobile-menu-close" type="button" data-menu-close>
+                <svg class="close-btn-icon">
+                    <use href="./images/sprite.svg#close-btn"></use>
+                </svg>
+            </button>
+            <ul class="mobile-nav list">
+                <li class="mobile-nav-item">
+                    <a href="./index.html" class="mobile-nav-link link current">Студия</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="./portfolio.html" class="mobile-nav-link link">Портфолио</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="" class="mobile-nav-link link">Контакты</a>
+                </li>
+            </ul>
+            <ul class="mltel-list list">
+                <li class="mltel-list-item">
+                    <a class="mltel-list-link link" href="tel:+380961111111">
+                        +38 096 111 11 11</a>
+                </li>
+                <li class="mltel-list-item">
+                    <a class="mltel-list-link link" href="mailto:info@devstudio.com">
+                        info@devstudio.com
+                    </a>
+                </li>
+            </ul>
+            <ul class="mobile-menu-social list">
+                <li class="mobile-menu-social-item">
+                    <a lang="en" href="#" class="mobile-menu-social-link link">Instagram</a>
+                    <span>&vert;</span>
+                </li>
+                <li class="mobile-menu-social-item">
+                    <a lang="en" href="#" class="mobile-menu-social-link link">Twitter</a>
+                    <span>&vert;</span>
+                </li>
+                <li class="mobile-menu-social-item">
+                    <a lang="en" href="#" class="mobile-menu-social-link link">Facebook</a>
+                    <span>&vert;</span>
+                </li>
+                <li class="mobile-menu-social-item">
+                    <a lang="en" href="#" class="mobile-menu-social-link link">LinkedIn</a>
                 </li>
             </ul>
         </div>
@@ -69,8 +120,8 @@
                                 <use href="./images/sprite.svg#antenna"></use>
                             </svg>
                         </div>
-                        <h3 class="strengths-item-title">Внимание к деталям</h3>
-                        <p class="strengths-item-descr">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
+                        <h3 class="strengths-list-item-title">Внимание к деталям</h3>
+                        <p class="strengths-list-item-descr">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
                     </li>
                     <li class="strengths-list-item">
                         <div class="strengths-image">
@@ -78,8 +129,8 @@
                                 <use href="./images/sprite.svg#clock"></use>
                             </svg>
                         </div>
-                        <h3 class="strengths-item-title">Пунктуальность</h3>
-                        <p class="strengths-item-descr">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
+                        <h3 class="strengths-list-item-title">Пунктуальность</h3>
+                        <p class="strengths-list-item-descr">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
                     </li>
                     <li class="strengths-list-item">
                         <div class="strengths-image">
@@ -87,8 +138,8 @@
                                 <use href="./images/sprite.svg#diagram"></use>
                             </svg>
                         </div>
-                        <h3 class="strengths-item-title">Планирование</h3>
-                        <p class="strengths-item-descr">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
+                        <h3 class="strengths-list-item-title">Планирование</h3>
+                        <p class="strengths-list-item-descr">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
                     </li>
                     <li class="strengths-list-item">
                         <div class="strengths-image">
@@ -96,8 +147,8 @@
                                 <use href="./images/sprite.svg#astronaut"></use>
                             </svg>
                         </div>
-                        <h3 class="strengths-item-title">Современные технологии</h3>
-                        <p class="strengths-item-descr">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
+                        <h3 class="strengths-list-item-title">Современные технологии</h3>
+                        <p class="strengths-list-item-descr">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
                     </li>
                 </ul>
             </div>
@@ -134,7 +185,30 @@
                 <h2 class="section-title">Наша команда</h2>
                 <ul class="team-list list">
                     <li class="team-list-item">
-                        <img src="./images/team/igor.jpg" alt="Фото Игоря Демьяненко" width="270" height="260">
+                        <picture>
+                            <source 
+                                srcset="./images/team/igor-desk.webp 1x, ./images/team/igor-desk@2x.webp 2x"
+                                media ="(min-width: 1200px)" type= "image/webp">
+                            <source 
+                                srcset="./images/team/igor-desk.jpg 1x, ./images/team/igor-desk@2x.jpg 2x"
+                                media ="(min-width: 1200px)">
+                            
+                            <source 
+                                srcset="./images/team/igor-tablet.webp 1x, ./images/team/igor-tablet@2x.webp 2x"
+                                media ="(min-width: 768px)" type= "image/webp">
+                            <source 
+                                srcset="./images/team/igor-tablet.jpg 1x, ./images/team/igor-tablet@2x.jpg 2x"
+                                media ="(min-width: 768px)">
+                            
+                            <source 
+                                srcset="./images/team/igor-mobile.webp 1x, ./images/team/igor-mobile@2x.webp 2x"
+                                media="(min-width: 480px)" type= "image/webp">
+                            <source 
+                                srcset="./images/team/igor-mobile.jpg 1x, ./images/team/igor-mobile@2x.jpg 2x"
+                                media="(min-width: 480px)">
+
+                            <img src="./images/team/igor-mobile.jpg" alt="Фото Игоря Демьяненко">
+                        </picture>
                         <div class="team-pad">
                             <h3 class="team-item-title">Игорь Демьяненко</h3>
                             <p class="team-item-descr" lang="en">Product Designer</p>
@@ -171,7 +245,29 @@
                         </div>
                     </li>
                     <li class="team-list-item">
-                        <img src="./images/team/olga.jpg" alt="Фото Ольги Репиной" width="270" height="260">
+                        <picture>
+                            <source 
+                                srcset="./images/team/olga-desk.webp 1x, ./images/team/olga-desk@2x.webp 2x"
+                                media ="(min-width: 1200px)" type= "image/webp">
+                            <source 
+                                srcset="./images/team/olga-desk.jpg 1x, ./images/team/olga-desk@2x.jpg 2x"
+                                media ="(min-width: 1200px)">
+                            
+                            <source 
+                                srcset="./images/team/olga-tablet.webp 1x, ./images/team/olga-tablet@2x.webp 2x"
+                                media ="(min-width: 768px)" type= "image/webp">
+                            <source 
+                                srcset="./images/team/olga-tablet.jpg 1x, ./images/team/olga-tablet@2x.jpg 2x"
+                                media ="(min-width: 768px)">
+                            
+                            <source 
+                                srcset="./images/team/olga-mobile.webp 1x, ./images/team/olga-mobile@2x.webp 2x"
+                                media="(max-width: 480px)" type= "image/webp">
+                            <source 
+                                srcset="./images/team/olga-mobile.jpg 1x, ./images/team/olga-mobile@2x.jpg 2x"
+                                media="(min-width: 480px)">
+                                <img src="./images/team/olga-mobile.jpg" alt="Фото Ольги Репиной">
+                        </picture>
                         <div class="team-pad">
                             <h3 class="team-item-title">Ольга Репина</h3>
                             <p class="team-item-descr" lang="en">Frontend Developer</p>
@@ -208,7 +304,29 @@
                         </div>
                     </li>
                     <li class="team-list-item">
-                        <img src="./images/team/nicolay.jpg" alt="Фото Николая Тарасова" width="270" height="260">
+                        <picture>
+                            <source 
+                                srcset="./images/team/nikolay-desk.webp 1x, ./images/team/nikolay-desk@2x.webp 2x"
+                                media ="(min-width: 1200px)" type= "image/webp">
+                            <source 
+                                srcset="./images/team/nikolay-desk.jpg 1x, ./images/team/nikolay-desk@2x.jpg 2x"
+                                media ="(min-width: 1200px)">
+                            
+                            <source 
+                                srcset="./images/team/nikolay-tablet.webp 1x, ./images/team/nikolay-tablet@2x.webp 2x"
+                                media ="(min-width: 768px)" type= "image/webp">
+                            <source 
+                                srcset="./images/team/nikolay-tablet.jpg 1x, ./images/team/nikolay-tablet@2x.jpg 2x"
+                                media ="(min-width: 768px)">
+                            
+                            <source 
+                                srcset="./images/team/nikolay-mobile.webp 1x, ./images/team/nikolay-mobile@2x.webp 2x"
+                                media="(min-width: 480px)" type= "image/webp">
+                            <source 
+                                srcset="./images/team/nikolay-mobile.jpg 1x, ./images/team/nikolay-mobile@2x.jpg 2x"
+                                media="(min-width: 480px)">
+                            <img src="./images/team/nikolay-mobile.jpg" alt="Фото Николая Тарасова">
+                        </picture>
                         <div class="team-pad">
                             <h3 class="team-item-title">Николай Тарасов</h3>
                             <p class="team-item-descr" lang="en">Marketing</p>
@@ -245,7 +363,29 @@
                         </div>
                     </li>
                     <li class="team-list-item">
-                        <img src="./images/team/michael.jpg" alt="Фото Михаила Ермакова" width="270" height="260">
+                        <picture>
+                            <source 
+                                srcset="./images/team/michael-desk.webp 1x, ./images/team/michael-desk@2x.webp 2x"
+                                media ="(min-width: 1200px)" type= "image/webp">
+                            <source 
+                                srcset="./images/team/michael-desk.jpg 1x, ./images/team/michael-desk@2x.jpg 2x"
+                                media ="(min-width: 1200px)">
+                            
+                            <source 
+                                srcset="./images/team/michael-tablet.webp 1x, ./images/team/michael-tablet@2x.webp 2x"
+                                media ="(min-width: 768px)" type= "image/webp">
+                            <source 
+                                srcset="./images/team/michael-tablet.jpg 1x, ./images/team/michael-tablet@2x.jpg 2x"
+                                media ="(min-width: 768px)">
+                            
+                            <source 
+                                srcset="./images/team/michael-mobile.webp 1x, ./images/team/michael-mobile@2x.webp 2x"
+                                media="(min-width: 480px)" type= "image/webp">
+                            <source 
+                                srcset="./images/team/michael-mobile.jpg 1x, ./images/team/michael-mobile@2x.jpg 2x"
+                                media="(min-width: 480px)">
+                            <img src="./images/team/michael-mobile.jpg" alt="Фото Михаила Ермакова">
+                        </picture>
                         <div class="team-pad">
                             <h3 class="team-item-title">Михаил Ермаков</h3>
                             <p class="team-item-descr" lang="en">UI Designer</p>
@@ -338,8 +478,7 @@
     </main>
     <footer class="footer">
         <div class="container">
-            <div class="footer container">
-
+            <div class="footer-thumb">
                 <!-- LEFT FOOTER/ADDRESS -->
                 <div class="footer-left">
                     <!--ссылка на главную страничку -->
@@ -394,12 +533,15 @@
                         </li>
                     </ul>
                 </div>
+            </div>
 
                 <!-- RIGHT-FOOTER/SUBSCRIPTION -->
                 <div class="footer-right">
                     <p class="footer-title">Подпишитесь на рассылку</p>
                     <form class="subscription-form" action="#">
-                        <input class="subscription-email" type="email" name="subscription-email" placeholder="E-mail">
+                        <div class="subscription-thumb">
+                            <input class="subscription-email" type="email" name="subscription-email" placeholder="E-mail">
+                        </div>
                         <button class="sb-btn-submit" type="submit">
                             <span class="sb-btn-submit-title">Подписаться</span> 
                             <svg class="sb-btn-submit-icon">
@@ -412,6 +554,11 @@
             </div>
         </div>
     </footer>
+
+
+
+
+
     <!-- MODAL WINDOW -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal-wnd">
@@ -482,5 +629,6 @@
 
     <!-- CONECTION OF SCRIPTs -->
     <script src="./js/modal.js"></script>
-</body>
+    <script src="./js/mobile-menu.js"></script>
+    </body>
 </html>

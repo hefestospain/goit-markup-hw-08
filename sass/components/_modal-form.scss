@@ -122,10 +122,15 @@
         display: flex;
         align-items: center;
     
-        font-size: 14px;
-        line-height: 1.714;
+        font-size: 12px;
+        line-height: 1.167;
         letter-spacing: 0.03em;
         color: var(--second-text-col);
+
+        @media screen and (min-width: 1200px) {
+            font-size: 14px;
+            line-height: 1.714;
+        }
 
         /*modal-form-label-policy::before*/
         &::before {

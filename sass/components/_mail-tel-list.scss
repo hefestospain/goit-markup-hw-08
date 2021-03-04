@@ -1,60 +1,119 @@
-/*mail y telephone*/
-.mltel-list {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
+// /*mail y telephone*/
 
-    &-item:not(:last-child) {
-        margin-right: 30px;
+@media screen and (max-width: 767px) {
+    .mltel-list {
+        display: none;
+
+        .mobile-menu & {
+            display: block;
+            margin-top: 300px;
+            margin-bottom: 64px;
+
+            &-item:nth-child(1) {
+                margin-bottom: 32px;
+    
+                font-weight: 500;
+                font-size: 34px;
+                line-height: 1.176;
+                letter-spacing: 0.02em;
+
+                .mltel-list-link {
+                    color: var(--accent-color);
+                }
+            }
+    
+            &-item:nth-child(2) {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 1.167;
+                letter-spacing: 0.02em;
+
+                .mltel-list-link {
+                    color: var(--second-text-col);
+                }
+            }
+        }
+
+        
     }
-
-    /*mltel-list-link*/
-    &-link { 
-        padding: 32px 0px;;
-
-        transition: color var(--trans-duration) var(--trans-time-func);
-
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.143;
-        letter-spacing: 0.02em;
-        color: var(--second-text-col);
-    
+}
+@media screen and (min-width: 768px) {
+    .mltel-list {
         display: flex;
-        align-items: center;
+        margin-left: auto;
     
-        fill: var(--second-text-col);
-
-        /*mltel-list-link:hover, :focus*/
-        &:hover,
-        &:focus {
-            color: var(--accent-color);
+    /*mltel-list-link*/
+        &-link { 
+    
+            transition: color var(--trans-duration) var(--trans-time-func);
+    
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.143;
+            letter-spacing: 0.02em;
+            color: var(--second-text-col);
+       
+            display: flex;
+            align-items: center;
+        
+            fill: var(--second-text-col);
+    
+            /*mltel-list-link:hover, :focus*/
+            &:hover,
+            &:focus {
+                color: var(--accent-color);
+            }
+        }
+    }
+    
+    .logo-mail {
+        width: 16px;
+        height: 12px;
+        margin-right: 10px;
+    
+        transition: fill var(--trans-duration) var(--trans-time-func);
+    
+        .mltel-list-link:hover &,
+        .mltel-list-link:focus & {
+            fill: var(--accent-color);
+        }
+    }
+    
+    .logo-phone {
+        width: 10px;
+        height: 16px;
+        margin-right: 10px;
+    
+        transition: fill var(--trans-duration) var(--trans-time-func);
+    
+        .mltel-list-link:hover &,
+        .mltel-list-link:focus & {
+            fill: var(--accent-color);
         }
     }
 }
 
-.logo-mail {
-    width: 16px;
-    height: 12px;
-    margin-right: 10px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .mltel-list {
+        display: flex;
+        flex-direction: column;
 
-    transition: fill var(--trans-duration) var(--trans-time-func);
-
-    .mltel-list-link:hover &,
-    .mltel-list-link:focus & {
-        fill: var(--accent-color);
+        &-item:first-child {
+            margin-bottom: 10px;
+        }
     }
 }
 
-.logo-phone {
-    width: 10px;
-    height: 16px;
-    margin-right: 10px;
+@media screen and (min-width: 1200px) {
+    .mltel-list {
+        align-items: center;
+        
+        &-link {
+            padding: 32px 0px;;
+        }
 
-    transition: fill var(--trans-duration) var(--trans-time-func);
-
-    .mltel-list-link:hover &,
-    .mltel-list-link:focus & {
-        fill: var(--accent-color);
+        &-item:not(:last-child) {
+            margin-right: 30px;
+        }
     }
 }

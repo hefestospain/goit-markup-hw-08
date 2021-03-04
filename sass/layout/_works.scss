@@ -1,35 +1,63 @@
 /*.......WORKS/PORTFOLIO.......*/
 .works {
-    padding: 95px 0px;
+    padding: 60px 0;
+    @media screen and (min-width: 1200px) {
+        padding: 95px 0px;
+    }
 
     /*works-list*/
     &-list {
         display: flex;
-        align-items: center;
+        
         flex-wrap: wrap;
 
+        @media screen and (min-width: 1200px) {
+            align-items: center;
+        }
+
+        
         /*works-list-item*/
         &-item {
-            width: 370px;
+            width: 100%;
+            margin-bottom: 30px;
+
             background-color: var(--white-text);
             border: 1px solid #EEEEEE;
 
-            /*works-list-item:not...*/
-            &:not(:nth-child(3n)) {
-                margin-right: 30px;
+            
+            @media screen and(min-width: 768px) and (max-width:1199px) {
+                width: 354px;
+                
+                &:nth-child(2n+1) {
+                    margin-right: 30px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+
             }
 
-            /*works-list-item:not...*/
-            &:not(:nth-child(n+7)) {
-                margin-bottom: 30px;
-            }
+            @media screen and (min-width: 1200px) {
+                width: 370px;
+
+                /*works-list-item:not...*/
+                &:not(:nth-child(3n)) {
+                    margin-right: 30px;
+                }
+
+                /*works-list-item:not...*/
+                &:not(:nth-child(n+7)) {
+                    margin-bottom: 30px;
+                }
+            }  
         }
     }
 
     /*works-item-link*/
     &-item-link {
-        display: block;
-        width: 370px;
+        // display: block;
+        // width: 100%;
     
         box-shadow: none;
         transition: box-shadow var(--trans-duration) var(--trans-time-func);
@@ -98,5 +126,6 @@
 }
 /*контейнер для падингов для карточек ПОРТФОЛИО*/
 .portfolio-pad{
+    display: inline-block;
     padding: 20px 24px;
 }

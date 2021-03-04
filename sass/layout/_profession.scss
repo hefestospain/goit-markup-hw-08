@@ -1,5 +1,9 @@
 /*..........PROFESSION - ЧЕМ ЗАНИМАЕМСЯ..........*/
+
 .profession {
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
     padding-bottom: 95px;
 
     /*profession-list*/
