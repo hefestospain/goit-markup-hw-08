@@ -280,24 +280,6 @@ img {
   }
 }
 
-/*...current color for active page...*/
-.current {
-  color: var(--accent-color);
-}
-
-@media screen and (min-width: 768px) {
-  .current::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--accent-color);
-  }
-}
-
 /*...TITLE FOR WORK AND TEAM...*/
 .section-title {
   margin-bottom: 50px;
@@ -333,7 +315,12 @@ img {
 }
 
 @media screen and (max-width: 767px) {
-  .filter-list-item:not(:nth-child(n+4)) {
+  .filter-list {
+    /*сделал всем кнопкам марджин-ботом, чтоб когда видс меньше 480 
+        и кнопки становяться уже не так как на макете, чтоб было все красиво
+        оставляю предедущий код для сравнения*/
+  }
+  .filter-list-item {
     margin-bottom: 15px;
   }
 }
@@ -492,12 +479,13 @@ img {
     left: 50%;
     padding: 48px 40px;
     width: 100%;
-    max-width: 480px;
     height: 100vh;
     overflow-y: hidden;
     transform: translateX(-50%) translateY(-100%);
     transition: transform var(--trans-duration) var(--trans-time-func);
     background-color: var(--white-text);
+    /*mobile-menu-close*/
+    /*mobile-menu-social*/
   }
   .mobile-menu-close {
     position: absolute;
@@ -510,6 +498,7 @@ img {
   .mobile-menu-social {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
   .mobile-menu-social-item {
     font-weight: 500;
@@ -531,10 +520,13 @@ img {
     font-size: 40px;
     line-height: 1.175;
     letter-spacing: 0.02em;
-    color: #212121;
   }
   .mobile-nav-item:not(:last-child) {
     margin-bottom: 32px;
+  }
+  /*mobile-nav-lin*/
+  .mobile-nav-link {
+    color: var(--main-text-col);
   }
   .mobile-menu.is-open {
     transform: translateX(-50%) translateY(0);
@@ -584,6 +576,24 @@ img {
   }
   .nav-list-link:hover, .nav-list-link:focus {
     color: var(--accent-color);
+  }
+}
+
+/*...current color for active page...*/
+.current {
+  color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .current::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
   }
 }
 
@@ -833,6 +843,9 @@ img {
 }
 
 .works-item-link {
+  display: block;
+  width: 100%;
+  height: 100%;
   box-shadow: none;
   transition: box-shadow var(--trans-duration) var(--trans-time-func);
   /*works-item-link:hover, :focus*/
